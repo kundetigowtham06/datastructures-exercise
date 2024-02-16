@@ -47,7 +47,7 @@ int main()
 	}
 else if(key<a[mid])
 {
-end=mid;
+end=mid-1;
 }
 else if(key>a[mid])
 {
