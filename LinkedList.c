@@ -92,6 +92,34 @@ void delete_at_end(struct node*head){
 	current->next=NULL;
 	free(ptr);
 }
+void delete_at_position(struct node*head,int pos);
+void delete_at_position(struct node*head,int pos)
+{
+	struct node*ptr=head;
+	struct node*temp=malloc(sizeof(struct node*));
+	while(pos!=1)
+	{
+		temp=ptr;
+		ptr=ptr->next;
+		pos--;
+	}
+	temp->next=ptr->next;
+	free(ptr);
+}
+int search(struct node*head,int key);
+int search(struct node*head,int key)
+{
+	int count=0;
+	struct node*ptr=head;
+	while(ptr!=NULL)
+	{
+		count++;
+		if(key==ptr->data){
+		printf("ELEMENT FOUND AT %d",count);}
+		ptr=ptr->next;
+	}
+}
+
 
 
 int main(){
@@ -110,7 +138,7 @@ int main(){
 	printf("\n");
 	insert_at_position(head,20,2);
 	display(head);
-        printf("\n");
+    printf("\n");
 	delete_at_beginning(&head);
 	display(head);
 	printf("\n");
@@ -122,5 +150,9 @@ int main(){
 	printf("\n");
 	insert_at_beginning(&head,100);
 	display(head);
-
+	printf("\n");
+	delete_at_position(head,3);
+	display(head);
+	printf("\n");
+	search(head,50);
 }
