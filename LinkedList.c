@@ -138,7 +138,7 @@ int main(){
 	printf("\n");
 	insert_at_position(head,20,2);
 	display(head);
-    printf("\n");
+        printf("\n");
 	delete_at_beginning(&head);
 	display(head);
 	printf("\n");
