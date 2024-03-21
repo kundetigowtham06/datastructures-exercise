@@ -30,13 +30,25 @@ temp->next=NULL;
 temp->next=tail->next;
 tail->next=temp;
 }
+void insert_at_end(struct node**tail,int d);
+void insert_at_end(struct node**tail,int d){
+struct node*temp=malloc(sizeof(struct node*));
+temp->data=d;
+temp->next=NULL;
+
+temp->next=(*tail)->next;
+(*tail)->next=temp;
+
+(*tail)=temp;
+}
 int main(){
 struct node*tail=NULL;
 create_node(&tail,10);
 display(tail);
 insert_at_beginning(tail,20);
 display(tail);
-
+insert_at_end(&tail,40);
+display(tail);
 
 }
 
