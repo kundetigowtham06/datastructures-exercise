@@ -192,8 +192,8 @@ int main ()
 	head->data=10;
 	head->prev=NULL;
 	head->next=NULL;
-	insert_at_end(head,20);
 	insert_at_end(head,30);
+	insert_at_end(head,40);
 	display(head);
 	printf("After inserting at end\n");
 	insert_at_end(head,40);
@@ -202,9 +202,9 @@ int main ()
 	insert_at_beginning(&head,50);
 	display(head);
 	printf("After inserting at position\n");
-	insert_at_position(head,2,60,count_of_nodes(head));
+	insert_at_position(head,2,69,count_of_nodes(head));
 	display(head);
-    printf("After deleting at end\n");
+        printf("After deleting at end\n");
 	delete_at_end(head);
 	display(head);
 	printf("After deleting at position\n");
