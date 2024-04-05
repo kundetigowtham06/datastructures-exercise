@@ -130,11 +130,5 @@ int main()
 	delete_at_end(tail);
 	display(tail);
 	delete_at_position(tail,2);
-	display(tail);
-	
-	
-	
-	
-	
-	
+	display(tail);	
 }
