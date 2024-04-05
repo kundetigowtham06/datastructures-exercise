@@ -95,6 +95,21 @@ free(tail);
 tail=ptr;
 
 }
+void delete_at_position(struct node *,int );
+void delete_at_position(struct node *tail,int pos)
+{
+struct node*ptr=tail->next;
+while(pos>2)
+{
+	ptr=ptr->next;
+	pos--;
+}
+struct node *ptr1=ptr->next;
+ptr->next=ptr1->next;
+ptr1->next->prev=ptr;
+free(ptr1);
+
+}
 
 int main() 
 {
@@ -114,6 +129,9 @@ int main()
 	display(tail);
 	delete_at_end(tail);
 	display(tail);
+	delete_at_position(tail,2);
+	display(tail);
+	
 	
 	
 	
