@@ -76,7 +76,7 @@ void infix_to_postfix ()
 			{
 			  postfix[j++] = f;
 			}
-			f=pop();
+		
 		}
 	  else if (sym == '+' || sym == '-' || sym == '*' || sym == '/'
 			   || sym == '^')
@@ -96,12 +96,12 @@ void infix_to_postfix ()
 
 
 	}
-	while (top != -1)
+	while (top != -1){
 
 		  postfix[j++] = pop ();
 
 		  postfix[j] = '\0';
-
+}
 }
 
 
