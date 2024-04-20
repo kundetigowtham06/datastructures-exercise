@@ -51,7 +51,7 @@ int main() {
                 result=b/a;
                 break;
             }
-  			
+  		result=result+'0';	
             push(result) ;
         }
       
