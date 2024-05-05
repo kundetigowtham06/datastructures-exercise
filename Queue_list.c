@@ -19,7 +19,7 @@ int isempty()
 {
 	if(front==NULL)
 	{
-	return 1;+
+	return 1;
 	}
 	else
 	{
